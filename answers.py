@@ -32,24 +32,21 @@ def calculate_discount(price, discount_percent):
 '''   
 
 def main():
-    
+
 
     while True:
-        original_price = input("enter the original price:")
-        discount_percent = input("enter the discount percent:")
+        original_price = input("Enter the original price: ")
+        discount_percent = input("Enter the discount percent: ")
         try:
-            price_original = int(original_price)
-            discount_percentage = int(discount_percent)
+            price_original = float(original_price)  # Use float for prices
+
+            discount_percentage = float(discount_percent)  # Use float for percentages
             break
         except ValueError:
-            print("You did not enter the original price!")
-            print("You did not enter the discount!")
+            print("Invalid input! Please enter numeric values for price and discount.")
 
-
-    if discount_percent >=20:
-        return calculate_discount()
+    if discount_percentage >= 20:
+        final_price = calculate_discount(price_original, discount_percentage)
+        print(f"The final price after applying the discount is: {final_price:.2f}")
     else:
-        return original_price
-
-            
-main()  
+        print(f"No discount applied. The original price is: {price_original:.2f}")
