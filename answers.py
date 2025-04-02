@@ -49,4 +49,7 @@ def main():
         final_price = calculate_discount(price_original, discount_percentage)
         print(f"The final price after applying the discount is: {final_price:.2f}")
     else:
-        print(f"No discount applied. The original price is: {price_original:.2f}")
+        print(f"No discount applied. The original price is: {price_original:.2f}") 
+
+# Call the function
+main()
